@@ -14,6 +14,19 @@ export const meta: MetaFunction = () => ({
   viewport: "width=device-width,initial-scale=1",
 });
 
+function Layout() {
+  return(
+  <>
+    <header>
+      <h1>Bienvenido a mi pagina</h1>
+    </header>
+    <Outlet/>
+    <footer>
+      Contacto: facebook.com/jsojso
+    </footer>
+  </>)
+}
+
 export default function App() {
   return (
     <html lang="en">
@@ -22,6 +35,7 @@ export default function App() {
         <Links />
       </head>
       <body>
+        <Layout/>
         <Outlet />
         <ScrollRestoration />
         <Scripts />
